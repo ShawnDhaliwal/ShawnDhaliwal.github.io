@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400');
+@import url('http://fonts.googleapis.com/css?family=Oswald:700|Droid+Serif:400');
+html, body {height: 100%;}
+
+h1 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    line-height: 51px;
+    font-size: 46px;
+    text-transform: uppercase;
+    margin: 0 0 23px 0;
+    }
+h2 {
+    font-family: 'Droid Serif', serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 20px;
+    margin: 0 0 23px 0;
+    }
+p {
+    font-family: 'Droid Serif', serif;
+    font-size: 15px;
+    line-height: 23px;
+    margin: 0 0 23px 0;
+    }
+
+@media(max-width: 500px){
+	.section-1 .section-1-h1 {font-size: 35PX !important;}
+
+}
+
+@media(max-width: 1024px){
+	.section-1 {height: 500px !important;}
+}
+
+.section-1 {
+	background-image: url("web/section-1-background-image.jpg");
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    background-size: cover;
+    height:100%;
+}
+
+.section-1 .section-1-text{
+	position: relative;
+	top: 350px;
+	right: 20px;
+	float: right;
+}
+
+.section-1 .section-1-h1{
+	color: white;
+	font-size: 50px;
+	line-height: 40px;
+}
+
+.section-1 .section-1-h1 small{
+	color: white;
+}
+
+.section-2 .section-2-h1{
+
+}
+
+.section-2-text, .section-3-text, .section-4-text, .section-5-text{
+	padding: 50px 50px 50px 50px;
+}
+
+.section-2 .about-me-text{
+	font-size: 15px;
+}
+
+.section-2 .section-2-quote-text{
+	background-color:  #f2f2f2;
+	padding-right: 20px;
+	border-width: 10px;
+	border-style: solid;
+	border-color:  #f2f2f2;
+
+}
+
+.section-3 {
+	background-color: rgb(55, 67, 85);
+}
+
+.section-3 .section-3-text{
+	color: white;
+}
+
+.section-5 {
+	background-color: rgb(55, 67, 85);
+}
+
+.section-5 .section-5-text{
+	color: white;
+}
+

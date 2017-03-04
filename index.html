@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+		<link rel="stylesheet" href="styles.css">
+		<style>
+		.go-top {
+		    position: fixed;
+		    bottom: 0.75em;
+		    right: 0.5em;
+		    text-decoration: none;
+		    color: white;
+		    background-color: rgba(0, 0, 0, 0.6);
+		    font-size: 12px;
+		    padding: 10px;
+		    display: none;
+		    margin: 0;
+		}
+
+		.go-top:hover {
+		    background-color: rgba(0, 0, 0, 0.9);
+		    color: white;
+		    text-decoration: none;
+		}
+		</style>
+		<script>
+	        $(document).ready(function() {
+	            // Show or hide the sticky footer button
+	            $(window).scroll(function() {
+	                if ($(this).scrollTop() > 200) {
+	                    $('.go-top').fadeIn(500);
+	                } else {
+	                    $('.go-top').fadeOut(300);
+	                }
+	            });
+
+	            // Animate the scroll to top
+	            $('.go-top').click(function(event) {
+	                event.preventDefault();
+
+	                $('html, body').animate({scrollTop: 0}, 300);
+	            })
+	        });
+    	</script>
+		<script>
+			$(document).ready(function(){
+			  // Add smooth scrolling to all links
+			  $("a").on('click', function(event) {
+
+			    // Make sure this.hash has a value before overriding default behavior
+			    if (this.hash !== "") {
+			      // Prevent default anchor click behavior
+			      event.preventDefault();
+
+			      // Store hash
+			      var hash = this.hash;
+
+			      // Using jQuery's animate() method to add smooth page scroll
+			      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+			      $('html, body').animate({
+			        scrollTop: $(hash).offset().top
+			      }, 800, function(){
+			   
+			        // Add hash (#) to URL when done scrolling (default click behavior)
+			        window.location.hash = hash;
+			      });
+			    } // End if
+			  });
+			});
+		</script>
+	</head>
+	<body>
+		<div class = "section-1">
+			<div class = "container-fluid">
+				<div class = "section-1-text">
+					<div class = "row">
+						<div class = "col-md-12">
+							<h1 class = "section-1-h1">Shawn Dhaliwal<br><small>Student/Developer/Entrepreneur</small></h1>
+							<a href="#learnMore">About</a>
+							<a href="#Projects">Projects</a>
+							<a href="#Skills">Skills</a>
+							<a href="#Contact">Contact</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class = "content">
+			<div class = "section-2" id="learnMore">
+				<div class = "container-fluid">
+					<div class = "section-2-text">
+						<div class= "row">
+							<div class = "col-md-12">
+								<center><h1 class = "section-2-h1"><b>ABOUT MYSELF</b></h1></center><br><br>
+							</div>
+						</div>
+						<div class = "row">
+							<div class = "col-md-6">
+								<p class="about-me-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam nibh. Nunc varius facilisis eros. Sed erat. In in velit quis arcu ornare laoreet. Curabitur adipiscing luctus massa. Integer ut purus ac augue commodo commodo. Nunc nec mi eu justo tempor consectetuer. Etiam vitae nisl.
+								<br><br>
+								Vestibulum pretium, lectus nec venenatis volutpat, purus lectus ultrices risus, a condimentum risus mi et quam. Pellentesque auctor fringilla neque. Duis eu massa ut lorem iaculis vestibulum. Maecenas facilisis elit sed justo. Quisque volutpat malesuada velit. 
+								<br><br>
+								Nunc at velit quis lectus nonummy eleifend. Curabitur eros. Aenean ligula dolor, gravida auctor, auctor et, suscipit in, erat. Sed malesuada, enim ut congue pharetra, massa elit convallis pede, ornare scelerisque libero neque ut neque.
+							</div>
+							<div class="col-md-1"></div>						
+							<div class = "col-md-5" id="section-2-quote">
+								<h2 class="section-2-quote-text"><b>"To live is the rarest thing in the world. <br>Most people just exist.”</b></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class = "section-3" id="Projects">
+				<div class = "container-fluid">
+					<div class = "section-3-text">
+						<div class = "row">
+							<center>
+								<h1 class="section-3-h1"><b>PERSONAL PROJECTS</b></h1>
+							</center>
+						</div>
+						<div class = "row">
+							<center>
+								<div class="col-sm-4">
+									<p>Logo</p>
+									<h3>Saiddit</h3>
+									<p>Tech Used</p>
+									<p>View Github</p>
+
+								</div>
+								<div class="col-sm-4">
+									<p>Logo</p>
+									<h3>BeProductive</h3>
+									<p>Tech Used</p>
+									<p>View Github</p>
+								</div>
+								<div class="col-sm-4">
+									<p>Logo</p>
+									<h3>MyImages</h3>
+									<p>Tech Used</p>
+									<p>View Github</p>
+								</div>
+							</center>
+						</div>						
+					</div>
+				</div>
+			</div>
+
+			<div class = "section-4" id="Skills">
+				<div class = "container-fluid">
+					<div class = "section-4-text">
+						<div class = "row">
+							<div class = "col-md-12">
+								<center>
+									<h1 class="section-4-h1"><b>SKILLS</b></h1>
+								</center>
+							</div>
+						</div>
+						<div class = "row">
+							<div class = "col-md">
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class = "section-5" id="Contact">
+				<div class = "container-fluid">
+					<div class = "section-5-text">
+						<div class = "row">
+							<div class = "col-md-12">
+								<center>
+									<h1 class="section-4-h1"><b>CONTACT ME</b></h1>
+								</center>
+							</div>
+						</div>
+						<div class = "row">
+							<div class = "col-md">
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+<a href="#" class="go-top" style="display: none;">Back to top</a>
+
+	</body>
+</html>
