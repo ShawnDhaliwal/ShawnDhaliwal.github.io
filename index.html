@@ -13,6 +13,10 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 		<link rel="stylesheet" href="styles.css">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+
+		<link rel="stylesheet" href="bower_components/bootstrap-social/bootstrap-social.css">
+		<link rel="stylesheet" href="bower_components/bootstrap-social/bootstrap-social.scss">
 		<style>
 		.go-top {
 		    position: fixed;
@@ -78,6 +82,21 @@
 			  });
 			});
 		</script>
+		<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+		<script type="text/javascript">
+		   (function(){
+		      emailjs.init("user_aXGUgSbhmcdVdikbNKZaj");
+		   })();
+		</script>
+		<script type="text/javascript">
+			function email_me() {
+				var message=document.getElementById('message').value;
+				var email=document.getElementById('email').value;
+				emailjs.send("gmail","portfolio_emails",{user_email: email, message_html: message});
+				setTimeout(function(){location.href=""} , 500);   
+				return false;
+			}
+		</script>
 	</head>
 	<body>
 		<div class = "section-1">
@@ -86,10 +105,10 @@
 					<div class = "row">
 						<div class = "col-md-12">
 							<h1 class = "section-1-h1">Shawn Dhaliwal<br><small>Student/Developer/Entrepreneur</small></h1>
-							<a href="#learnMore">About</a>
-							<a href="#Projects">Projects</a>
-							<a href="#Skills">Skills</a>
-							<a href="#Contact">Contact</a>
+							<a class="moveTo" href="#learnMore">About</a><span> |</span>
+							<a class="moveTo" href="#Projects">Projects</a><span> |</span>
+							<a class="moveTo" href="#Skills">Skills</a><span> |</span>
+							<a class="moveTo" href="#Contact">Contact</a>
 						</div>
 					</div>
 				</div>
@@ -110,7 +129,7 @@
 								<br><br>
 								Vestibulum pretium, lectus nec venenatis volutpat, purus lectus ultrices risus, a condimentum risus mi et quam. Pellentesque auctor fringilla neque. Duis eu massa ut lorem iaculis vestibulum. Maecenas facilisis elit sed justo. Quisque volutpat malesuada velit. 
 								<br><br>
-								Nunc at velit quis lectus nonummy eleifend. Curabitur eros. Aenean ligula dolor, gravida auctor, auctor et, suscipit in, erat. Sed malesuada, enim ut congue pharetra, massa elit convallis pede, ornare scelerisque libero neque ut neque.
+								Nunc at velit quis lectus nonummy eleifend. Curabitur eros. Aenean ligula dolor, gravida auctor, auctor et, suscipit in, erat. Sed malesuada, enim ut congue pharetra, massa elit convallis pede, ornare scelerisque libero neque ut neque.</p>
 							</div>
 							<div class="col-md-1"></div>						
 							<div class = "col-md-5" id="section-2-quote">
@@ -167,12 +186,21 @@
 							</div>
 						</div>
 						<div class = "row">
-							<div class = "col-md">
+							<div class = "col-md-6">
+								<ul>
+								<li><p class="skills-text"><span>Javascript</span> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam nibh. Nunc varius facilisis eros. Sed erat. In in velit quis arcu ornare laoreet. Curabitur adipiscing luctus massa. Integer ut purus ac augue commodo commodo. Nunc nec mi eu justo tempor consectetuer. Etiam vitae nisl.
+								<br></p></li>
+								</ul>
 							</div>
+							<div class="col-md-6">
+								<ul>
+								<li><p class="skills-text"><span>Database Management Systems</span> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam nibh. Nunc varius facilisis eros. Sed erat. In in velit quis arcu ornare laoreet. Curabitur adipiscing luctus massa. Integer ut purus ac augue commodo commodo. Nunc nec mi eu justo tempor consectetuer. Etiam vitae nisl.
+								<br></p></li>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 
 		<div class = "section-5" id="Contact">
 				<div class = "container-fluid">
@@ -180,18 +208,68 @@
 						<div class = "row">
 							<div class = "col-md-12">
 								<center>
-									<h1 class="section-4-h1"><b>CONTACT ME</b></h1>
+									<h1 class="section-4-h1"><b>CONTACT</b></h1>
 								</center>
+							</div>					
+						</div><br>
+						<div class = "row">
+						<div class = "col-md-6">
+							<form class="form-horizontal" onsubmit="return email_me()" action="" method='post'>
+							  <div class="form-group">
+							    <label class="control-label col-sm-3" for="email">Your Email:</label>
+							    <div class="col-sm-9">
+							      <input type="email" class="form-control" id="email" placeholder="example@domain.com" maxlength="100"  required>
+							    </div>
+							  </div>
+							  <div class="form-group">
+							    <label class="control-label col-sm-3" for="message">Message:</label>
+							    <div class="col-sm-9"> 
+							      <textarea class="form-control" id="message"  placeholder="Enter text" maxlength="1000" required></textarea>
+							    </div>
+							  </div>
+							  <div class="form-group"> 
+							    <div class="col-sm-offset-3 col-sm-9">
+							      <button type="submit" class="btn btn-default">Send</button>
+							    </div>
+							  </div>
+							</form>
+						</div>
+						<div class = "col-md-6">
+							<div class="row">
+								<div class = "col-md-12">
+									<center>
+									<img src="web/bottom-profile-contact.jpg" class="bottom-profile-img">
+									</center>
+								</div>
+							</div>
+							<div class = "row">
+								<div class = "col-md-12">
+									<center class="social-icons-section">
+										<a class="btn btn-social-icon btn-linkedin" href="https://www.linkedin.com/in/shawn-dhaliwal-3a2568120/" target="_blank">
+	  										<span class="fa fa-linkedin"></span>
+										</a>
+										<a class="btn btn-social-icon btn-github" href="https://github.com/ShawnDhaliwal" target=_"blank">
+	  										<span class="fa fa-github"></span>
+										</a>										
+										<a class="btn btn-social-icon btn-facebook" href="https://www.facebook.com/shawn.dhaliwal.50" target=_"blank">
+	  										<span class="fa fa-facebook"></span>
+										</a>
+									</center>
+								</div>
 							</div>
 						</div>
-						<div class = "row">
-							<div class = "col-md">
-							</div>
+					</div>
+					</div>
+					<div class="section-5-form">
 					</div>
 				</div>
-			</div>
 		</div>
 <a href="#" class="go-top" style="display: none;">Back to top</a>
 
 	</body>
+	<script>
+	$(document).ready(function() {
+    	$('body').fadeIn(1500);
+	});
+	</script>
 </html>
