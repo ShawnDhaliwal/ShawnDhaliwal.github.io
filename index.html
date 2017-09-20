@@ -2,6 +2,8 @@
 <html>
 	<head>
 		<!-- Latest compiled and minified CSS -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 		<!-- Optional theme -->
@@ -17,6 +19,10 @@
 
 		<link rel="stylesheet" href="bower_components/bootstrap-social/bootstrap-social.css">
 		<link rel="stylesheet" href="bower_components/bootstrap-social/bootstrap-social.scss">
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  		<script src="typed.min.js"></script>
+  		<script src="typed.js"></script>
+
 		<style>
 		.go-top {
 		    position: fixed;
@@ -38,6 +44,13 @@
 		}
 		</style>
 		<script>
+  var typed = new Typed('.element', {
+    stringsElement: '#typed-strings'
+  });
+</script>
+		<script>
+
+
 	        $(document).ready(function() {
 	            // Show or hide the sticky footer button
 	            $(window).scroll(function() {
@@ -82,32 +95,24 @@
 			  });
 			});
 		</script>
-		<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-		<script type="text/javascript">
-		   (function(){
-		      emailjs.init("user_aXGUgSbhmcdVdikbNKZaj");
-		   })();
-		</script>
-		<script type="text/javascript">
-			function email_me() {
-				var message=document.getElementById('message').value;
-				var email=document.getElementById('email').value;
-				emailjs.send("gmail","portfolio_emails",{user_email: email, message_html: message});
-				setTimeout(function(){location.href=""} , 500);   
-				return false;
-			}
-		</script>
 	</head>
-	<body>
+
 		<div class = "section-1">
 			<div class = "container-fluid">
 				<div class = "section-1-text">
 					<div class = "row">
 						<div class = "col-md-12">
-							<h1 class = "section-1-h1">Shawn Dhaliwal<br><small>Student/Developer/Entrepreneur</small></h1>
+							<h1 class = "section-1-h1">Shawn Dhaliwal<br>
+							<small id="hello"></small></h1>
+							<script>
+							    var options = {
+							      strings: ["Welcome to my portfolio!"],
+							      typeSpeed: 40,
+							    }
+							    var typed = new Typed("#hello", options);
+							</script>
 							<a class="moveTo" href="#learnMore">About</a><span> |</span>
 							<a class="moveTo" href="#Projects">Projects</a><span> |</span>
-							<a class="moveTo" href="#Skills">Skills</a><span> |</span>
 							<a class="moveTo" href="#Contact">Contact</a>
 						</div>
 					</div>
@@ -120,20 +125,20 @@
 					<div class = "section-2-text">
 						<div class= "row">
 							<div class = "col-md-12">
-								<center><h1 class = "section-2-h1"><b>ABOUT MYSELF</b></h1></center><br><br>
+								<center><h1 class = "section-2-h1"><b>ABOUT ME</b></h1></center><br><br>
 							</div>
 						</div>
 						<div class = "row">
 							<div class = "col-md-6">
-								<p class="about-me-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam nibh. Nunc varius facilisis eros. Sed erat. In in velit quis arcu ornare laoreet. Curabitur adipiscing luctus massa. Integer ut purus ac augue commodo commodo. Nunc nec mi eu justo tempor consectetuer. Etiam vitae nisl.
+								<p class="about-me-text">Hello, my name is Shawn and I am a third/fourth year computer science student at the University of Victoria. I was born and raised in Victoria, BC and I love it here! But I've travelled the world a bit, visiting places such as California, Toronto, India, and Japan (which was awesome!).
 								<br><br>
-								Vestibulum pretium, lectus nec venenatis volutpat, purus lectus ultrices risus, a condimentum risus mi et quam. Pellentesque auctor fringilla neque. Duis eu massa ut lorem iaculis vestibulum. Maecenas facilisis elit sed justo. Quisque volutpat malesuada velit. 
+								I'm a passionate programmer with praticular interests in software and full stack web development. While attending classes, i've learned many development technologies and frameworks such as Symfony and Spring Boot. I enjoy learning as much as possible and making the most of my opportunities. Be sure to check out my linkden at the bottom of the page to learn more about my programming experience.
 								<br><br>
-								Nunc at velit quis lectus nonummy eleifend. Curabitur eros. Aenean ligula dolor, gravida auctor, auctor et, suscipit in, erat. Sed malesuada, enim ut congue pharetra, massa elit convallis pede, ornare scelerisque libero neque ut neque.</p>
+								Aside from programmer, I also enjoy playing sports such as basketball and badminton. Some of my hobbies include gaming, movie watching (praticularly the horror genre), netflix, and excercising.</p>
 							</div>
 							<div class="col-md-1"></div>						
 							<div class = "col-md-5" id="section-2-quote">
-								<h2 class="section-2-quote-text"><b>"To live is the rarest thing in the world. <br>Most people just exist.”</b></p>
+								<img id="positionUp" src = "https://scontent-sea1-1.xx.fbcdn.net/v/t1.0-9/21616041_1652718521468817_3011981134122175063_n.jpg?oh=9c3372b9f7433a661843bbf4a69e0e43&oe=5A4AA32A">
 							</div>
 						</div>
 					</div>
@@ -144,67 +149,33 @@
 				<div class = "container-fluid">
 					<div class = "section-3-text">
 						<div class = "row">
-							<center>
-								<h1 class="section-3-h1"><b>PERSONAL PROJECTS</b></h1>
-							</center>
+							<div class = "col-md-12">
+								<center>
+									<h1 class="section-3-h1"><b>PERSONAL PROJECTS</b></h1>
+								</center>
+							</div>
 						</div>
 						<div class = "row">
-							<center>
-								<div class="col-sm-4">
-									<p>Logo</p>
-									<h3>Saiddit</h3>
-									<p>Tech Used</p>
-									<p>View Github</p>
-
-								</div>
-								<div class="col-sm-4">
-									<p>Logo</p>
-									<h3>BeProductive</h3>
-									<p>Tech Used</p>
-									<p>View Github</p>
-								</div>
-								<div class="col-sm-4">
-									<p>Logo</p>
-									<h3>MyImages</h3>
-									<p>Tech Used</p>
-									<p>View Github</p>
-								</div>
-							</center>
+							<div class = "col-md-12">
+								<h2>MyMovieList</h2>
+							</div>
+							<div class = "col-md-6">
+								<p>MyMovieList is a web applicaiton that I developed using Spring Boot while attending classes at the University of Victoria. MyMovieList allows users to search for any movie and it will return relative information about it such as genre, release date, movie cast, and even ratings. Users can also create accounts and like/dislike movies that they have watched, which is all kept track of on their profile page. Click <a href= "https://mymovielistboot.herokuapp.com" target="_blank">here</a> to check out the live site (inital load may take a while, try reloading if it fails to load)  or the <a href="https://github.com/ShawnDhaliwal/mymovielistboot">github page</a> to learn more.</p>
+							</div> 
+							<div class = "col-md-2"></div>
+							<div class = "col-md-4" id="positionUp">
+								<a href= "https://mymovielistboot.herokuapp.com" target="_blank">
+								<img class="hover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE3BPDH8fxYXKKO-M3HxK4orElxEq35y5XXU1jadyG5EWfwoXSgQ"></a>
+								<p>Official logo coming soon :)</p>
+							</div>
 						</div>						
 					</div>
 				</div>
 			</div>
 
-			<div class = "section-4" id="Skills">
+		<div class = "section-4" id="Contact">
 				<div class = "container-fluid">
 					<div class = "section-4-text">
-						<div class = "row">
-							<div class = "col-md-12">
-								<center>
-									<h1 class="section-4-h1"><b>SKILLS</b></h1>
-								</center>
-							</div>
-						</div>
-						<div class = "row">
-							<div class = "col-md-6">
-								<ul>
-								<li><p class="skills-text"><span>Javascript</span> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam nibh. Nunc varius facilisis eros. Sed erat. In in velit quis arcu ornare laoreet. Curabitur adipiscing luctus massa. Integer ut purus ac augue commodo commodo. Nunc nec mi eu justo tempor consectetuer. Etiam vitae nisl.
-								<br></p></li>
-								</ul>
-							</div>
-							<div class="col-md-6">
-								<ul>
-								<li><p class="skills-text"><span>Database Management Systems</span> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam nibh. Nunc varius facilisis eros. Sed erat. In in velit quis arcu ornare laoreet. Curabitur adipiscing luctus massa. Integer ut purus ac augue commodo commodo. Nunc nec mi eu justo tempor consectetuer. Etiam vitae nisl.
-								<br></p></li>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-		<div class = "section-5" id="Contact">
-				<div class = "container-fluid">
-					<div class = "section-5-text">
 						<div class = "row">
 							<div class = "col-md-12">
 								<center>
@@ -213,59 +184,38 @@
 							</div>					
 						</div><br>
 						<div class = "row">
-						<div class = "col-md-6">
-							<form class="form-horizontal" onsubmit="return email_me()" action="" method='post'>
-							  <div class="form-group">
-							    <label class="control-label col-sm-3" for="email">Your Email:</label>
-							    <div class="col-sm-9">
-							      <input type="email" class="form-control" id="email" placeholder="example@domain.com" maxlength="100"  required>
-							    </div>
-							  </div>
-							  <div class="form-group">
-							    <label class="control-label col-sm-3" for="message">Message:</label>
-							    <div class="col-sm-9"> 
-							      <textarea class="form-control" id="message"  placeholder="Enter text" maxlength="1000" required></textarea>
-							    </div>
-							  </div>
-							  <div class="form-group"> 
-							    <div class="col-sm-offset-3 col-sm-9">
-							      <button type="submit" class="btn btn-default">Send</button>
-							    </div>
-							  </div>
-							</form>
-						</div>
-						<div class = "col-md-6">
-							<div class="row">
-								<div class = "col-md-12">
-									<center>
-									<img src="web/bottom-profile-contact.jpg" class="bottom-profile-img">
-									</center>
+							<center>
+							<div class = "col-sm-12">
+								<div class = "col-sm-3"></div>
+								<div class = "col-sm-2" id="social-icons-div" onclick="location.href='https://www.linkedin.com/in/shawn-dhaliwal-3a2568120/';" style="cursor:pointer;">
+								<a class="btn btn-social-icon btn-linkedin" id="icon-move-down" href="https://github.com/ShawnDhaliwal" target=_"blank">
+		  							<span class="fa fa-linkedin"></span>
+								</a>
 								</div>
-							</div>
-							<div class = "row">
-								<div class = "col-md-12">
-									<center class="social-icons-section">
-										<a class="btn btn-social-icon btn-linkedin" href="https://www.linkedin.com/in/shawn-dhaliwal-3a2568120/" target="_blank">
-	  										<span class="fa fa-linkedin"></span>
-										</a>
-										<a class="btn btn-social-icon btn-github" href="https://github.com/ShawnDhaliwal" target=_"blank">
-	  										<span class="fa fa-github"></span>
-										</a>										
-										<a class="btn btn-social-icon btn-facebook" href="https://www.facebook.com/shawn.dhaliwal.50" target=_"blank">
-	  										<span class="fa fa-facebook"></span>
-										</a>
-									</center>
+								<div class = "col-sm-2" id="social-icons-div" onclick="location.href='https://github.com/ShawnDhaliwal';" style="cursor:pointer;">
+								<a class="btn btn-social-icon btn-github" id="icon-move-down" href="https://github.com/ShawnDhaliwal" target=_"blank">
+		  							<span class="fa fa-github"></span>
+								</a>
 								</div>
+								<div class = "col-sm-2" id="social-icons-div" onclick="location.href='https://www.facebook.com/shawn.dhaliwal.50?ref=bookmarks';" style="cursor:pointer;">
+								<a class="btn btn-social-icon btn-facebook" id="icon-move-down" href="https://github.com/ShawnDhaliwal" target=_"blank">
+		  							<span class="fa fa-facebook"></span>
+								</a>
+								</div>
+								<!--<div class = "col-sm-2" id="social-icons-div" onclick="location.href='https://github.com/ShawnDhaliwal';" style="cursor:pointer;">
+								<a class="btn btn-social-icon btn-envelope" id="email-icon" ><span class="fa fa-envelope"></span>
+								</a>
+								</div>-->
+								<div class = "col-sm-2"></div>
 							</div>
+							</center>
 						</div>
-					</div>
-					</div>
-					<div class="section-5-form">
 					</div>
 				</div>
-		</div>
-<a href="#" class="go-top" style="display: none;">Back to top</a>
 
+		</div>
+
+		<a href="#" class="go-top" style="display: none;">Back to top</a>
 	</body>
 	<script>
 	$(document).ready(function() {

@@ -2,7 +2,7 @@
 @import url('http://fonts.googleapis.com/css?family=Oswald:700|Droid+Serif:400');
 html, body {height: 100%;}
 
-body { display: none;  background-color: #2d2d2d}
+body { display: none; }
 
 h1 {
     font-family: 'Oswald', sans-serif;
@@ -35,6 +35,26 @@ p {
 	.section-1 {height: 500px !important;}
 }
 
+.navbar{
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	background-color: black;
+}
+
+.moveTo{
+	transition: all .2s ease-in-out;
+	text-decoration: none;
+    color: white;
+}
+
+.moveTo:hover { 
+	transform: scale(1.9); 
+	text-decoration: none;
+	color: white;
+
+}
+
 .section-1 {
 	background-image: url("web/section-1-background-image.jpg");
 	background-repeat: no-repeat;
@@ -49,23 +69,6 @@ p {
 	top: 350px;
 	right: 20px;
 	float: right;
-}
-
-.section-1 .section-1-text a{
-    -webkit-transition: all 1s ease; /* Safari and Chrome */
-    -moz-transition: all 1s ease; /* Firefox */
-    -ms-transition: all 1s ease; /* IE 9 */
-    -o-transition: all 1s ease; /* Opera */
-    transition: all 1s ease;
-    text-decoration: none;
-    color: white;
-}
-
-.section-1 .section-1-text a:hover {
-	text-decoration: none;
-    -ms-transform: scale(2, 3); /* IE 9 */
-    -webkit-transform: scale(2, 3); /* Safari */
-    transform: scale(2, 3);
 }
 
 .section-1 .section-1-text span{
@@ -104,16 +107,23 @@ p {
 }
 
 .section-3 {
-	background-color: #2D2D2D
 }
 
 .section-3 .section-3-text{
-	color: white;
+	color: #2D2D2D;
 }
 
+.section-3-text{
+
+    padding-bottom: 0px !important;
+
+}
 .section-4{
 background-color: white !important;
 
+}
+.section-4 .section-4-text p{
+	font-size: 13px !important;
 }
 
 .section-5 {
@@ -139,9 +149,123 @@ background-color: white !important;
 	border-radius: 30px;
 	border-color: white;
 }
+.btn-social-icon{
+	font-size: 25px !important;
+	height: 50px !important;
+	width: 50px !important;
+}
 
-.social-icons-section{
+#email-icon{
+	font-size: 30px !important;
+	height: 60px !important;
+	width: 60px !important;
 	position: relative;
 	top: 10px;
 }
 
+#email-icon>:first-child{
+	top: 0px !important;
+	padding-top: 10px !important;
+}
+
+#social-icons-div {
+	height: 75px;
+  	transition: background-color 1s ease;
+	border-radius: 10px;
+
+}
+
+#social-icons-div:hover{
+	background-color: #f33446;
+	border-style: solid;
+	border-color: #f33446;
+}
+
+#social-icons-div:hover > .btn-linkedin, #social-icons-div:hover > .btn-facebook, #social-icons-div:hover > .btn-github, #social-icons-div:hover > .btn-github{
+	color:#f33446;background-color:#fff;
+	border-color:rgba(0,0,0,0.2);
+
+
+}
+
+#social-icons-div:hover > .btn-envelope{
+	color:#f33446;background-color:#fff;
+	border-color:rgba(0,0,0,0.2);
+}
+
+#icon-move-down{
+	position: relative;
+	top: 11px;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.section-3 .project-item{
+	display: block;
+	height: 200px;
+	width: 100%;
+	background-color: #ff3333;
+
+}
+.copyrighted-section .copyright-text{
+	color: white;
+}
+
+.magnifying-glass {
+	height: 100px;
+	width: 100px;
+	position: relative;
+	bottom: 150px;
+	display: block;
+  	transition: 1s ease;
+  	opacity: 0.0;
+  	text-align: center;
+}
+
+.project-item{
+	transition: 1s ease;
+}
+
+.project-item:hover + .magnifying-glass {
+    opacity: 1;
+}
+
+.magnifying-glass:hover{
+	opacity: 1;
+}
+
+.project-item:hover{
+	opacity: 0.4;
+	background-color:  #ff6666;
+}
+
+.project-title{
+	position: relative;
+	left: 13px;
+}
+
+.section-2-h1 b, .section-3-h1 b, .section-4-h1 b{
+	border-bottom: solid;
+    border-color: #f33446;
+    border-width: 1px
+}
+
+.section-3-h1{
+	    margin-bottom: 70px;
+
+}
+
+#positionUp{
+	position: relative;
+    bottom: 45px;
+}
+.hover { transition: all .2s ease-in-out; padding: 20px 0px;}
+.hover:hover { transform: scale(1.1); }
+
+@media(max-width: 991px){
+
+	.hover:hover {padding: 40px 0px !important; }
+}
+small{
+	font-size: 50% !important;
+}
