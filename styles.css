@@ -271,21 +271,27 @@ small{
 	font-size: 50% !important;
 }
 
-		.go-top {
-		    position: fixed;
-		    bottom: 0.75em;
-		    right: 0.5em;
-		    text-decoration: none;
-		    color: white;
-		    background-color: rgba(0, 0, 0, 0.6);
-		    font-size: 12px;
-		    padding: 10px;
-		    display: none;
-		    margin: 0;
-		}
+.go-top {
+    position: fixed;
+    bottom: 0.75em;
+    right: 0.5em;
+    text-decoration: none;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+    padding: 10px;
+    display: none;
+    margin: 0;
+}
 
-		.go-top:hover {
-		    background-color: rgba(0, 0, 0, 0.9);
-		    color: white;
-		    text-decoration: none;
-		}
+.go-top:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    text-decoration: none;
+}
+
+#leagueLogo{
+	height: 200px;
+    position: relative;
+    top: 40px;
+}
